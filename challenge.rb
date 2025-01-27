@@ -2,7 +2,7 @@ require "openai"
 require "dotenv/load"
 
 client = OpenAI::Client.new(access_token: ENV.fetch("OPEN_API_KEY"))
-
+user_request = ""
 
 while user_request.downcase != 'bye'
 
@@ -24,3 +24,4 @@ while user_request.downcase != 'bye'
   puts api_response['choices'][0]['message']['content']
 
   puts "-" * 50
+  end
